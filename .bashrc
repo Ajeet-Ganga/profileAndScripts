@@ -22,6 +22,7 @@ alias gss='git status -s'
 
 alias gssu='git status -suno'
 
+alias c='clear'
 
 ###############################################################################
 # MVN alias
