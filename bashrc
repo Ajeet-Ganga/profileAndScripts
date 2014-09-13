@@ -89,10 +89,25 @@ alias l='ls -CF'                              #
 alias c='clear'
 
 
-# Colored
-# export PS1='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h: \[\e[33m\]\w\[\e[0m\]\n[\!]$'
-#No color
-export PS1='\u@\h:\w\n[\!]$'
+# Terminal Prompt
+# line 1 : user@host: git-branch : short-dir
+# line 2 : cmd_history_number
+export gitprompt='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]\[$(__git_ps1 "%s")\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
+alias prgit='export PS1=$gitprompt'
+
+###############################################################################
+# Terminal prompt
+###############################################################################
+
+# Terminal Prompt
+# line 1 : user@host : short-dir
+# line 2 : cmd_history_number
+#export normal='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
+export normalprompt='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
+alias prdefault='export PS1=$normalprompt'
+
+export PS1=$normalprompt
+
 
 alias hg="history | grep"
 alias showprocess='ps -U aganga -F'
