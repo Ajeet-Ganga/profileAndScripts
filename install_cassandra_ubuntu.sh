@@ -13,3 +13,13 @@ echo 'export CASSANDRA_HOME=~/cassandra' >> ~/.bashrc
 export PATH=$PATH:$CASSANDRA_HOME/bin
 echo 'export PATH=$PATH:$CASSANDRA_HOME/bin' >> ~/.bashrc
 
+alias cassandra_start_bg='sudo sh ~/cassandra/bin/cassandra'
+alias cassandra_start_fg='sudo sh ~/cassandra/bin/cassandra -f'
+alias cassandra_stop='sudo pkill -f CassandraDaemon'
+
+echo 'alias cassandra_start_bg="sudo sh ~/cassandra/bin/cassandra"' >> ~/.bashrc
+echo 'alias cassandra_start_fg="sudo sh ~/cassandra/bin/cassandra -f"' >> ~/.bashrc
+echo 'alias cassandra_stop="sudo pkill -f CassandraDaemon"' >> ~/.bashrc
+
+
+
