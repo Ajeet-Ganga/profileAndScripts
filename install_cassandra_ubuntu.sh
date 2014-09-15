@@ -1,7 +1,7 @@
 cd /tmp
 wget http://www.us.apache.org/dist/cassandra/2.1.0/apache-cassandra-2.1.0-bin.tar.gz
-tar -xvzf aapache-cassandra-2.1.0-bin.tar.gz
-mv apache-cassandra-2.1.0-bin.tar.gz ~/cassandra
+tar -xvzf apache-cassandra-2.1.0-bin.tar.gz
+mv apache-cassandra-2.1.0 ~/cassandra
 
 sudo mkdir /var/lib/cassandra
 sudo mkdir /var/log/cassandra
