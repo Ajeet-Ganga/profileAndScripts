@@ -1,13 +1,13 @@
 ###############################################################################
 # Initialization/Startup commands
 ###############################################################################
-echo '#################################################################'
-echo '#                                                               #'
-echo '#  Custom bashrc+prompt for Ajeet Ganga                         #'
-echo '#    Default prompt = user@host:pwd                             #'
-echo '#                     [commandHistoryNumber]$                   #'
-echo '#                                                               #'
-echo '#################################################################'
+echo '       #################################################################'
+echo '       #                                                               #'
+echo '       #  Custom bashrc+prompt for Ajeet Ganga                         #'
+echo '       #    Default prompt = user@host:pwd                             #'
+echo '       #                     [commandHistoryNumber]$                   #'
+echo '       #                                                               #'
+echo '       #################################################################'
 echo 'Custom prompt from : https://raw.githubusercontent.com/Ajeet-Ganga/profileAndScripts/master/bashrc'
 echo 'Git location  : https://github.com/Ajeet-Ganga/profileAndScripts.git'
 git config --global user.name "Ajeet Ganga"
