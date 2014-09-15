@@ -4,6 +4,8 @@
 echo 'Custom prompt from : https://raw.githubusercontent.com/Ajeet-Ganga/profileAndScripts/master/bashrc'
 echo 'Git location  : https://github.com/Ajeet-Ganga/profileAndScripts.git'
 git config --global user.name "Ajeet Ganga"
+git config --global color.ui true
+# git config --global core.autocrlf true
 
 ###############################################################################
 # GIT commans alias
