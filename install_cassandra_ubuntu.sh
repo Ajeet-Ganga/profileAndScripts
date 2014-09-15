@@ -29,7 +29,7 @@ echo 'alias cassandra_stop="sudo pkill -f CassandraDaemon"' >> ~/.bashrc
 
 #if [ "$(id -u)" != "0" ]; then
 #	echo "Sorry, retry as Root (sudo ...)"
-	#exit 1
+#	exit 1
 #fi
 #
 #sudo sh -c 'echo "deb http://debian.datastax.com/community stable main" > /etc/apt/sources.list.d/cassandra.sources.list'
