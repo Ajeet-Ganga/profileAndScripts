@@ -66,7 +66,7 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls:history' # Ignore the ls command as well
 export PROMPT_COMMAND="history -a"
-
+alias hgrep="history | grep"
 ###############################################################################
 # Aliases
 ###############################################################################
@@ -127,6 +127,6 @@ alias prdefault='export PS1=$normalprompt'
 export PS1=$normalprompt
 
 
-alias hg="history | grep"
+
 alias showprocess='ps -U aganga -F'
 
