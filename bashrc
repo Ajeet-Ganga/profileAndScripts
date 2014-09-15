@@ -92,7 +92,8 @@ alias c='clear'
 # Terminal Prompt
 # line 1 : user@host: git-branch : short-dir
 # line 2 : cmd_history_number
-export gitprompt='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]\[$(__git_ps1 "%s")\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
+#OLD  export gitprompt='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]\[$(__git_ps1 "%s")\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
+export gitprompt='\[\e[32m\]\u@\[\e[35m\]\h:\[\e[32m\]\[$(__git_ps1 "%s")\]:\[\e[35m\]\w\[\e[0m\]\n[\!]\$'
 alias prgit='export PS1=$gitprompt'
 
 ###############################################################################
@@ -103,7 +104,8 @@ alias prgit='export PS1=$gitprompt'
 # line 1 : user@host : short-dir
 # line 2 : cmd_history_number
 #export normal='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
-export normalprompt='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
+# OLD export normalprompt='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
+export normalprompt='\[\e[32m\]\u@\[\e[35m\]\h:\[\e[32m\]:\[\e[32m\]\w\[\e[0m\]\n[\!]\$'
 alias prdefault='export PS1=$normalprompt'
 
 export PS1=$normalprompt
