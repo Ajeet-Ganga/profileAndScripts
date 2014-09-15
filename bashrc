@@ -1,15 +1,15 @@
 ###############################################################################
 # Initialization/Startup commands
 ###############################################################################
-echo '\t\t#################################################################'
-echo '\t\t#                                                               #'
-echo '\t\t#  Custom bashrc+prompt for Ajeet Ganga                         #'
-echo '\t\t#    Default prompt = user@host:pwd                             #'
-echo '\t\t#                     [commandHistoryNumber]$                   #'
-echo '\t\t#                                                               #'
-echo '\t\t#################################################################'
-echo '\t\tCustom prompt from : https://raw.githubusercontent.com/Ajeet-Ganga/profileAndScripts/master/bashrc'
-echo '\t\t\tGit location  : https://github.com/Ajeet-Ganga/profileAndScripts.git'
+echo '#################################################################'
+echo '#                                                               #'
+echo '#  Custom bashrc+prompt for Ajeet Ganga                         #'
+echo '#    Default prompt = user@host:pwd                             #'
+echo '#                     [commandHistoryNumber]$                   #'
+echo '#                                                               #'
+echo '#################################################################'
+echo 'Custom prompt from : https://raw.githubusercontent.com/Ajeet-Ganga/profileAndScripts/master/bashrc'
+echo 'Git location  : https://github.com/Ajeet-Ganga/profileAndScripts.git'
 git config --global user.name "Ajeet Ganga"
 git config --global color.ui true
 # git config --global core.autocrlf true
