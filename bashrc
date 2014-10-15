@@ -99,6 +99,13 @@ alias fgrep='fgrep --color=auto'              # show differences in colour
 
 # Some shortcuts for different directory listings
 alias ls='ls -hF --color=tty'                 # classify files in colour
+## IF MAC
+# mv ~/.bashrc ~/.profile 
+#alias ls='ls -hF '                 # classify files in colour
+#export CLICOLOR=1
+#export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias ll='ls -l'                              # long list
