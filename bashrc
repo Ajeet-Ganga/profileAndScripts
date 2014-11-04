@@ -1,5 +1,19 @@
 ###############################################################################
-# Initialization/Startup commands
+# Detect OS and set variable
+###############################################################################
+if [ "$(uname)" == "Darwin" ]; then
+        export OS=MAC
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+        export OS=LIN
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+        export OS=WIN
+else
+        echo "!!! OS coulnd't be determined."
+fi
+
+
+###############################################################################
+# Initialization Banner
 ###############################################################################
 echo ""
 echo '       #################################################################'
@@ -12,10 +26,12 @@ echo '       #################################################################'
 echo ""
 echo 'Custom prompt from : https://raw.githubusercontent.com/Ajeet-Ganga/profileAndScripts/master/bashrc'
 echo 'Git location  : https://github.com/Ajeet-Ganga/profileAndScripts.git'
+echo "OS = " $OS
 echo ""
 git config --global user.name "Ajeet Ganga"
 git config --global color.ui true
 # git config --global core.autocrlf true
+
 
 ###############################################################################
 # GIT commans alias
@@ -98,13 +114,16 @@ alias egrep='egrep --color=auto'              # show differences in colour
 alias fgrep='fgrep --color=auto'              # show differences in colour
 
 # Some shortcuts for different directory listings
-alias ls='ls -hF --color=tty'                 # classify files in colour
-## IF MAC
-# mv ~/.bashrc ~/.profile 
-#alias ls='ls -hF '                 # classify files in colour
-#export CLICOLOR=1
-#export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+if [ "$OS" == "MAC" ]; then
+	alias ls='ls -hF '                 # classify files in colour
+	export CLICOLOR=1
+	export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+elif [ "$OS" == "LIN" ]; then
+	echo "No ls alias"
+elif [ "$OS" == "WIN" ]; then
+	alias ls='ls -hF --color=tty'                 # classify files in colour
+fi
 
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
