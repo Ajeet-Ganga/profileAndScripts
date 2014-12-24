@@ -155,7 +155,7 @@ alias prdefault='export PS1=$normalprompt'
 
 export PS1=$normalprompt
 
-
-
+#Create and Change directory to
+mkdcd () { mkdir -p "$@" && cd "$@"; }
 alias showprocess='ps -U aganga -F'
 
