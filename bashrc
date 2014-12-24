@@ -7,6 +7,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
         export OS=LIN
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
         export OS=WIN
+elif [ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ]; then
+        export OS=WIN
 else
         echo "!!! OS coulnd't be determined."
 fi
