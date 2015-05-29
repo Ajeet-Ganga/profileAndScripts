@@ -10,4 +10,6 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
 	cp ~/profileandscripts/bashrc ~/.bashrc
 fi
 
+cp ~/profileandscripts/.pythonrc ~/.pythonrc
+
 

@@ -5,3 +5,6 @@ if 'libedit' in readline.__doc__:
 else:
     readline.parse_and_bind("tab: complete")
 
+import numpy as np
+import random
+import collections
