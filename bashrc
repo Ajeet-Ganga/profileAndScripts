@@ -64,6 +64,15 @@ alias git-wtf='ruby ~/profileAndScripts/git-wtf.ruby'
 
 alias c='clear'
 
+# gitACP() ash function to 'added+committed+pushed'
+# param1 = File to added+committed+pushed
+# param2 = commit message
+function gitACP() {
+    git add $1
+    git commit -a -m "$2"
+    git push
+}
+
 ###############################################################################
 # MVN alias
 ###############################################################################
