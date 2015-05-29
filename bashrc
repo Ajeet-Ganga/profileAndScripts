@@ -170,3 +170,10 @@ export PS1=$normalprompt
 mkdcd () { mkdir -p "$@" && cd "$@"; }
 alias showprocess='ps -U aganga -F'
 
+
+###############################################################################
+# Python bashrc setup
+#   http://conjurecode.com/enable-auto-complete-in-python-interpreter/
+###############################################################################
+export PYTHONSTARTUP=~/.pythonrc
+
