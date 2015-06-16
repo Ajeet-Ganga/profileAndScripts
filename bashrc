@@ -124,6 +124,14 @@ alias grep='grep --color'                     # show differences in colour
 alias egrep='egrep --color=auto'              # show differences in colour
 alias fgrep='fgrep --color=auto'              # show differences in colour
 
+function greprec() {
+	grep -ir --include $2 $1 .
+}
+
+function egreprec() {
+	egrep -ir --include $2 $1 .
+}
+
 # Some shortcuts for different directory listings
 
 if [ "$OS" == "MAC" ]; then
