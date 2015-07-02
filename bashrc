@@ -138,6 +138,7 @@ if [ "$OS" == "MAC" ]; then
 	alias ls='ls -hF '                 # classify files in colour
 	export CLICOLOR=1
 	export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+	export JAVA_HOME=$(/usr/libexec/java_home)	# JAVA HOME on MAC
 elif [ "$OS" == "LIN" ]; then
 	echo "No ls alias"
 elif [ "$OS" == "WIN" ]; then
