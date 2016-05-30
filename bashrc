@@ -187,3 +187,17 @@ alias showprocess='ps -U aganga -F'
 ###############################################################################
 export PYTHONSTARTUP=~/.pythonrc
 
+
+###############################################################################
+# Docker related stuff
+###############################################################################
+alias dkps='docker ps -a'
+alias dksp='docker stop'
+alias dkst='docker start'
+alias dkr='docker rm'
+alias dkl='docker logs -f'
+alias dke='eval $(docker-machine env)'
+# Start a bash shell on container interactively
+function dkbash() { docker exec -it "$1" /bin/bash ;}
+# Stop and remove a container
+function dksr() { docker stop "$1"; docker rm "$1";}
