@@ -199,5 +199,9 @@ alias dkl='docker logs -f'
 alias dke='eval $(docker-machine env)'
 # Start a bash shell on container interactively
 function dkbash() { docker exec -it "$1" /bin/bash ;}
+function dkbashu() { docker exec -u "$2" -it "$1" /bin/bash ;}
 # Stop and remove a container
 function dksr() { docker stop "$1"; docker rm "$1";}
+
+# Docker machine related
+alias dkm-se='docker-machine start "default" && eval $(docker-machine env)'
