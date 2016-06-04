@@ -13,6 +13,16 @@ else
         echo "!!! OS coulnd't be determined."
 fi
 
+if [ "$OS" == "MAC" ]; then
+	alias ls='ls -hF '                 # classify files in colour
+	export CLICOLOR=1
+	export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+	export JAVA_HOME=$(/usr/libexec/java_home)	# JAVA HOME on MAC
+elif [ "$OS" == "LIN" ]; then
+	echo "No ls alias"
+elif [ "$OS" == "WIN" ]; then
+	alias ls='ls -hF --color=tty'                 # classify files in colour
+fi
 
 ###############################################################################
 # Initialization Banner
@@ -135,17 +145,6 @@ function egreprec() {
 
 # Some shortcuts for different directory listings
 
-if [ "$OS" == "MAC" ]; then
-	alias ls='ls -hF '                 # classify files in colour
-	export CLICOLOR=1
-	export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-	export JAVA_HOME=$(/usr/libexec/java_home)	# JAVA HOME on MAC
-elif [ "$OS" == "LIN" ]; then
-	echo "No ls alias"
-elif [ "$OS" == "WIN" ]; then
-	alias ls='ls -hF --color=tty'                 # classify files in colour
-fi
-
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias ll='ls -l'                              # long list
@@ -161,6 +160,10 @@ alias c='clear'
 #OLD  export gitprompt='\[\e]1;\w\a\]\n\[\e[32m\]\u@\h:\[\e[35m\]\[$(__git_ps1 "%s")\]:\[\e[33m\]\w\[\e[0m\]\n[\!]\$'
 export gitprompt='\[\e[32m\]\u@\[\e[35m\]\h:\[\e[32m\]\[$(__git_ps1 "%s")\]:\[\e[35m\]\w\[\e[0m\]\n[\!]\$'
 alias prgit='export PS1=$gitprompt'
+
+# MacPorts Installer addition, adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
 
 ###############################################################################
 # Terminal prompt
@@ -212,3 +215,4 @@ alias dkm-se='docker-machine start "default" && eval $(docker-machine env)'
 function dkdangerAllSp()  { docker stop $(docker ps -a -q) ; }
 # Remove all containers
 function dkdangerAllRm()  { docker rm $(docker ps -a -q) ;}
+
