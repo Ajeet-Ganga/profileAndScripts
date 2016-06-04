@@ -205,3 +205,10 @@ function dksr() { docker stop "$1"; docker rm "$1";}
 
 # Docker machine related
 alias dkm-se='docker-machine start "default" && eval $(docker-machine env)'
+
+
+# !!! dangerous
+# Stop all containers
+function dkdangerAllSp()  { docker stop $(docker ps -a -q) ; }
+# Remove all containers
+function dkdangerAllRm()  { docker rm $(docker ps -a -q) ;}
