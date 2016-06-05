@@ -1,3 +1,7 @@
+#TO RUN THIS SCRIPT
+# curl 'https://raw.githubusercontent.com/Ajeet-Ganga/profileAndScripts/master/install_java7_ubuntu.sh' | /bin/bash
+
+
 # From : http://stackoverflow.com/questions/16263556/installing-java-7-on-ubuntu
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
