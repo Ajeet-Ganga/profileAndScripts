@@ -1,4 +1,5 @@
 #TO RUN THIS SCRIPT
+# This line doesn't work yet. TODO:FIXME: 
 # curl 'https://raw.githubusercontent.com/Ajeet-Ganga/profileAndScripts/master/install_java7_ubuntu.sh' | /bin/bash
 
 
