@@ -208,8 +208,9 @@ function dksr() { docker stop "$1"; docker rm "$1";}
 
 # Docker machine related
 alias dkm-se='docker-machine start "default" && eval $(docker-machine env)'
-# Obviously from `johanhaleby/docker-machine-port-forwarder`
-alias dkm-pf='curl https://raw.githubusercontent.com/johanhaleby/docker-machine-port-forwarder/master/pf | /bin/bash'
+# dkm-pf port-host port-vbox
+function dkm-pf() { VBoxManage controlvm "default" natpf1 "tcp-port"$1",tcp,,"$1",,"$2"";}
+
 
 # !!! dangerous
 # Stop all containers
