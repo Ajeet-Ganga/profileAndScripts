@@ -6,5 +6,8 @@ else:
     readline.parse_and_bind("tab: complete")
 
 import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
 import random
 import collections
+import string
