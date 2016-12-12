@@ -166,6 +166,16 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 ###############################################################################
+# Python bashrc setup
+#   http://conjurecode.com/enable-auto-complete-in-python-interpreter/
+###############################################################################
+export PYTHONSTARTUP=~/.pythonrc
+# Python Virtual Env
+echo "Sourcing env from 'venvp3'"
+source venvp3/bin/activate
+
+
+###############################################################################
 # Terminal prompt
 ###############################################################################
 
@@ -184,11 +194,6 @@ mkdcd () { mkdir -p "$@" && cd "$@"; }
 alias showprocess='ps -U aganga -F'
 
 
-###############################################################################
-# Python bashrc setup
-#   http://conjurecode.com/enable-auto-complete-in-python-interpreter/
-###############################################################################
-export PYTHONSTARTUP=~/.pythonrc
 
 
 ###############################################################################
@@ -218,3 +223,6 @@ function dkdangerAllSp()  { docker stop $(docker ps -a -q) ; }
 # Remove all containers
 function dkdangerAllRm()  { docker rm $(docker ps -a -q) ;}
 
+
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
