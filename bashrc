@@ -216,6 +216,9 @@ alias dkm-se='docker-machine start "default" && eval $(docker-machine env)'
 # dkm-pf port-host port-vbox
 function dkmpf() { VBoxManage controlvm "default" natpf1 "tcp-port"$1",tcp,,"$1",,"$2"";}
 
+# Add user to docker group 
+# sudo usermod -aG docker $USER
+# Don't forget to logout/login.
 
 # !!! dangerous
 # Stop all containers
