@@ -17,7 +17,16 @@ brew update      # pulls the latest formula metadata
 # selected applications to be installed
 # ***
 brew install --cask spotify
-brew install --cask notion
+brew install --cask google-chrome
+
 brew install --cask clipy
 brew install --cask rectangle
-brew install --cask google-chrome
+brew install --cask hiddenbar
+brew install --cask itsycal
+
+brew install --cask daisydisk
+brew install --cask todoist
+brew install --cask notion
+brew install --cask obsidian             # A Markdown-based knowledge-base that lets you interlink notes, build a personal wiki, and visualize your ideas.
+
+brew install bat
