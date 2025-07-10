@@ -1,13 +1,15 @@
-# onetime
-bash xcode-select --install
+# Install Xcode Command Line Tools (if not already installed)
+xcode-select --install 2>/dev/null
 
-# install brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install Homebrew (if not installed)
+if ! command -v brew &>/dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
-# brew command shortcut
+# Add Homebrew to PATH for zsh (Apple Silicon default)
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 
-# Brew setup
+# Update and check brew
 brew doctor      # should say “Your system is ready to brew.”
 brew update      # pulls the latest formula metadata
 
@@ -18,4 +20,4 @@ brew install --cask spotify
 brew install --cask notion
 brew install --cask clipy
 brew install --cask rectangle
-brew install --cask chrome
+brew install --cask google-chrome
