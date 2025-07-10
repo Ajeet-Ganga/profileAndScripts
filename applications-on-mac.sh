@@ -29,4 +29,6 @@ brew install --cask todoist           # Task manager with project organization a
 brew install --cask notion            # All-in-one workspace for notes, databases, and collaboration
 brew install --cask obsidian          # Markdown-based personal knowledge management and note linking
 
+# Developer tools
 brew install bat                      # A better `cat` with syntax highlighting and Git integration
+brew install awscli
