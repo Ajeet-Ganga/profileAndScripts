@@ -229,3 +229,13 @@ function dkdangerAllRm()  { docker rm $(docker ps -a -q) ;}
 
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+###############################################################################
+# AWS related stuff
+###############################################################################
+alias setaws='function _setaws() { export AWS_PROFILE=$1; echo "AWS_PROFILE set to: $AWS_PROFILE"; }; _setaws'
+alias resetaws='unset AWS_PROFILE && echo "AWS_PROFILE unset"'
+
+# e.g.
+# setaws dev      # sets AWS_PROFILE=dev
+# resetaws        # unsets AWS_PROFILE
