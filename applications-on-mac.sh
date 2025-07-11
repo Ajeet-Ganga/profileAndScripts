@@ -34,3 +34,6 @@ brew install bat                      # A better `cat` with syntax highlighting 
 brew install awscli
 brew install awscurl
 brew install zsh-syntax-highlighting
+
+# Development packages
+brew install node
