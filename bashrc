@@ -147,9 +147,13 @@ function egreprec() {
 
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
-alias ll='ls -l'                              # long list
+#alias ll='ls -l'                              # long list
+alias ll='eza -la'
 alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
+
+
+alias lt='eza --tree'
 
 alias c='clear'
 
