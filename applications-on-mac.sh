@@ -9,10 +9,10 @@ fi
 # Add Homebrew to PATH for zsh (Apple Silicon default)
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 
-# Update and check brew
+# Keep Homebrew itself up to date
 brew doctor      # should say “Your system is ready to brew.”
 brew update      # pulls the latest formula metadata
-
+brew upgrade
 # ***
 # selected applications to be installed
 # ***
