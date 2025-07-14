@@ -16,24 +16,40 @@ brew upgrade
 # ***
 # selected applications to be installed
 # ***
-brew install --cask spotify           # Music streaming app with curated playlists and offline support
-brew install --cask google-chrome     # Popular web browser by Google with fast performance and syncing
 
-brew install --cask clipy             # Clipboard manager to access recent copied text or images
-brew install --cask rectangle         # Window manager to snap windows using keyboard shortcuts
-brew install --cask hiddenbar         # Utility to hide and organize menu bar items
-brew install --cask itsycal           # Lightweight calendar in the Mac menu bar
+# ---------- GUI applications (casks) ----------
+casks=(
+  # Music & browser
+  spotify           # Music streaming app with curated playlists and offline support
+  google-chrome     # Popular web browser by Google with fast performance and syncing
 
-brew install --cask daisydisk         # Disk space analyzer with interactive visual breakdown
-brew install --cask todoist           # Task manager with project organization and reminders
-brew install --cask notion            # All-in-one workspace for notes, databases, and collaboration
-brew install --cask obsidian          # Markdown-based personal knowledge management and note linking
+  # Productivity utilities
+  clipy             # Clipboard manager to access recent copied text or images
+  rectangle         # Window manager to snap windows using keyboard shortcuts
+  hiddenbar         # Utility to hide and organize menu bar items
+  itsycal           # Lightweight calendar in the Mac menu bar
 
-# Developer tools
-brew install bat                      # A better `cat` with syntax highlighting and Git integration
-brew install awscli
-brew install awscurl
-brew install zsh-syntax-highlighting
+  # Storage / notes / tasks
+  daisydisk         # Disk space analyzer with interactive visual breakdown
+  todoist           # Task manager with project organization and reminders
+  notion            # All-in-one workspace for notes, databases, and collaboration
+  obsidian          # Markdown-based personal knowledge management and note linking
+)
 
-# Development packages
-brew install node
+echo "Installing cask applications..."
+for app in "${casks[@]}"; do
+  brew install --cask "$app"
+done
+
+# ---------- Command-line developer tools ----------
+# bat: Better cat with syntax highlighting
+# awscli: AWS command-line interface
+# awscurl: SigV4-signed cURL wrapper for AWS services
+# zsh-syntax-highlighting: Fish-style command highlighting for Z-shell
+brew install bat awscli awscurl zsh-syntax-highlighting
+
+# ---------- Development runtimes & packages ----------
+# JavaScript/TypeScript runtime
+brew install node    
+
+echo "✅ All requested packages have been installed."
