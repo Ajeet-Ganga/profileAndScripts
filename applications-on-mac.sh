@@ -46,7 +46,7 @@ done
 # awscli: AWS command-line interface
 # awscurl: SigV4-signed cURL wrapper for AWS services
 # zsh-syntax-highlighting: Fish-style command highlighting for Z-shell
-brew install bat awscli awscurl zsh-syntax-highlighting
+brew install bat awscli awscurl zsh-syntax-highlighting graphviz plantuml 
 
 # ---------- Development runtimes & packages ----------
 # JavaScript/TypeScript runtime
