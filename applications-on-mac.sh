@@ -34,6 +34,9 @@ casks=(
   todoist           # Task manager with project organization and reminders
   notion            # All-in-one workspace for notes, databases, and collaboration
   obsidian          # Markdown-based personal knowledge management and note linking
+
+  # IDE
+  visual-studio-code # Light weight coding
 )
 
 echo "Installing cask applications..."
@@ -47,7 +50,7 @@ done
 # awscurl: SigV4-signed cURL wrapper for AWS services
 # zsh-syntax-highlighting: Fish-style command highlighting for Z-shell
 brew install bat awscli awscurl zsh-syntax-highlighting graphviz plantuml 
-
+brew install --cask visual-studio-code
 # ---------- Development runtimes & packages ----------
 # JavaScript/TypeScript runtime
 brew install node    
